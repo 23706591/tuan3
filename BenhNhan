@@ -1,0 +1,104 @@
+package tuan4;
+
+import java.time.LocalDate;
+
+public class BenhNhan {
+	private String maSoBN;
+	private String hoBN;
+	private String tenBN;
+	private String soDienThoai;
+	private String gioiTinh;
+	private LocalDate ngaySinh;
+	private String nhomMau;
+	private String diaChi;
+	
+	public BenhNhan() {
+		this("","","","","",LocalDate.of(0,  0, 0),"","");
+	}
+
+	public BenhNhan(String maSoBN, String hoBN, String tenBN, String soDienThoai, String gioiTinh, LocalDate ngaySinh,
+			String nhomMau, String diaChi) {
+		super();
+		this.maSoBN = maSoBN;
+		this.hoBN = hoBN;
+		setTenBN(tenBN);
+		this.soDienThoai = soDienThoai;
+		setGioiTinh(gioiTinh);
+		this.ngaySinh = ngaySinh;
+		this.nhomMau = nhomMau;
+		this.diaChi = diaChi;
+	}
+
+	public String getMaSoBN() {
+		return maSoBN;
+	}
+
+	public void setMaSoBN(String maSoBN) {
+		this.maSoBN = maSoBN;
+	}
+
+	public String getHoBN() {
+		return hoBN;
+	}
+
+	public void setHoBN(String hoBN) {
+		this.hoBN = hoBN;
+	}
+
+	public String getTenBN() {
+		return tenBN;
+	}
+
+	public void setTenBN(String tenBN) {
+		if(tenBN == null) throw new IllegalArgumentException("Ten benh nhan khong duoc de trong");
+		this.tenBN = tenBN;
+	}
+
+	public String getSoDienThoai() {
+		return soDienThoai;
+	}
+
+	public void setSoDienThoai(String soDienThoai) {
+		this.soDienThoai = soDienThoai;
+	}
+
+	public String getGioiTinh() {
+		return gioiTinh;
+	}
+
+	public void setGioiTinh(String gioiTinh) {
+		this.gioiTinh = gioiTinh;
+	}
+
+	public LocalDate getNgaySinh() {
+		return ngaySinh;
+	}
+
+	public void setNgaySinh(LocalDate ngaySinh) {
+		this.ngaySinh = ngaySinh;
+	}
+
+	public String getNhomMau() {
+		return nhomMau;
+	}
+
+	public void setNhomMau(String nhomMau) {
+		this.nhomMau = nhomMau;
+	}
+
+	public String getDiaChi() {
+		return diaChi;
+	}
+
+	public void setDiaChi(String diaChi) {
+		this.diaChi = diaChi;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("%15s %15s %15s %15s %15s %15s %15s %15s",  maSoBN, hoBN, tenBN, soDienThoai, gioiTinh, ngaySinh, nhomMau, diaChi);
+	}
+	
+	
+	
+}
